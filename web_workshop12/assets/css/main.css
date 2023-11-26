@@ -1,0 +1,590 @@
+body {
+    background-image: url(../images/banner.jpg);
+    background: rgb(45,45,45);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 5px black;
+    
+    animation: fadeInAnimation ease 1s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        /* background: green; */
+        opacity: 0;
+    }
+    100% {
+        /* background: green; */
+        opacity: 1;
+    }
+}
+a {
+    text-decoration: none;
+}
+a, a > * {
+    color: white;
+}
+.flexed {
+    display: flex;
+}
+.gap {
+    padding-top: 5rem;
+}
+
+.linked {
+    color: lime;
+    text-decoration: underline;
+}
+.linked-icon {
+    padding: 1ch;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+.linked-icon:hover {
+    transform: scale(105%);
+}
+
+.background img {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 0;
+    filter: blur(2px);
+}
+/* Header */
+.header {
+    /* position: fixed; */
+    color: white;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
+}
+.header > * {
+    margin: 1vh 1vw;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: rgb(40,40,40);
+    margin: 0;
+    padding: 1ch 0;
+}
+.footer ul {
+    display: flex;
+}
+.footer li {
+    list-style: none;
+}
+
+/* Icon */
+.icon {
+    flex-basis: 10%;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.icon:hover {
+    background: green;
+    transition: 0.1s;
+}
+.icon img {
+    height: 50px;
+}
+/* Navbar */
+.nav-list {
+    position: relative;
+    margin: auto 0;
+    margin-left: auto;
+}
+.nav-list nav {
+    margin: auto 1pc;
+    display: flex;
+}
+.nav-list nav > * {
+    margin-top: 1pc;
+}
+#user-img {
+    border-radius: 50%;
+}
+#user-name {
+    width: 10ch;
+    text-overflow: ellipsis;
+    white-space: no-wrap;
+    overflow: hidden;
+}
+
+/* Banner */
+.banner {
+    background: none;
+    height: 100vh;
+    z-index: 1;
+}
+.banner > .text {
+    margin-top: 20vh;
+    margin-left: 1pc;
+}
+.banner img {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: blur(5px);
+}
+.banner h1 {
+    word-wrap: break-word;
+    color: white;
+    font-size: 10ch;
+}
+.banner h3 {
+    color: white;
+    font-size: 3ch;
+}
+.banner .text {
+    position: absolute;
+}
+
+.footer {
+    background: green;
+}
+
+/* Button */
+button, input[type="submit"] {
+    background: green;
+    color: white;
+    padding: 0.5ch 1ch;
+    border: 0;
+    border-radius: 5px;
+
+    transition: 100ms ease-in;
+    cursor: pointer;
+}
+button:hover {
+    transform: scale(102.5%);
+}
+button:active {
+    transform: scale(100%);
+}
+.selected {
+    border: 1px solid lime;
+}
+
+.btn-green {
+    background: green;
+}
+.btn-orange {
+    background: orange;
+}
+.btn-red {
+    background: red;
+}
+.btn-inv {
+    background: none;
+    text-shadow: 2px 2px 5px black;
+    font-size: 2ch;
+}
+.btn-inv:hover {
+    background: green;
+    text-shadow: 2px 2px 5px gr;
+    font-size: 2ch;
+}
+
+/* Mods */
+.container-list {
+    /* border: 1px solid white; */
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 1pc auto;
+    padding: 1ch;
+    gap: 1ch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.modlist {
+    flex-basis: calc(30%);
+    background: rgb(40,40,40);
+    display: flex;
+    position: relative;
+    padding: 1ch;
+    min-width: 20ch;
+    flex-direction: column;
+    transition: 100ms ease-in;
+}
+.modlist:hover {
+    background: rgb(60,60,60);
+    transform: scale(100.5%);
+}
+.modlist a {
+    color: lime;
+}
+.genre {
+    display: flex;
+}
+.genre > * {
+    background: green;
+    width: max-content;
+    margin-top: 1ch;
+    margin-bottom: 0;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+.modlist-image {
+    width: 100%;
+    height: 20ch;
+    border: 1px inset lime;
+    border-radius: 5px;
+}
+.modlist img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modlist .cnt {
+    background: grey;
+    position: absolute;
+    margin: 1ch;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Burger */
+.hamburger {
+    display: none;
+    position: relative;
+    margin: auto 2.5ch;
+}
+.hoveron {
+    width: min-content;
+    position: relative;
+}
+.hamburger:hover .dropdown, .hoveron:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.dropdown {
+    background: green;
+    display: none;
+    position: absolute;
+    min-width: 10ch;
+    z-index: 1;
+    /* right: 0; */
+    transition: 100ms ease-in;
+}
+#dropdown1 {
+    background: rgb(50,50,50);
+    box-shadow: 0.1ch 0.1ch 1ch black;
+    left: 1;
+    right: 1;
+}
+.dropdown a {
+    padding: 1ch;
+}
+.dropdown a:hover {
+    background: rgb(0, 150, 0);
+}
+
+/* Page Switch */
+.switch {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.switch > * {
+    padding: 5px;
+}
+.switch a:hover i {
+    transform: scale(125%);
+}
+
+/* Search */
+.search {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    margin: 0 5pc;
+    gap: 5px;
+}
+.search>:nth-child(1) {
+    flex-basis: 75%;
+}
+.search>:nth-child(2) {
+    background: red;
+    flex-basis: 20%;
+}
+
+/* Form */
+.container-form {
+    position: relative;
+    /* background: grey; */
+    width: 50%;
+    height: auto;
+    margin: 20vh auto;
+    border-radius: 5px;
+    border: 1px solid green;
+    /* padding: 1.5ch; */
+}
+.form-body > * {
+    margin: 1ch 0;
+}
+.container-form table {
+    width: 100%;
+}
+.container-form .methods {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.form-body {
+    margin: 1ch;
+}
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    width: 100%;
+    border: 1px solid lime;
+    padding: 0.5ch 0;
+    text-indent: 1ch;
+}
+input[type="search"] {
+    border: 1px solid lime;
+    padding: 0.5ch 0;
+    text-indent: 1ch;
+}
+input[readonly] {
+    background: grey;
+}
+select {
+    border: 1px solid lime;
+    border-radius: 1ch;
+    padding: 0.5ch;
+}
+input[type="file"] {
+    border: 1px solid lime;
+    /* border-radius: 1ch; */
+}
+textarea {
+    width: 100%;
+    padding: 0.5ch 0;
+    border: 1px dashed lime;
+    resize: none;
+}
+#comment {
+    background: rgb(60,60,60);
+    color: white;
+    border: 0;
+    border-radius: 1ch;
+}
+
+.container-mod {
+    position: relative;
+    margin: 1ch;
+}
+.container-mod p {
+    margin: auto;
+}
+.container-mod h1 {
+    margin: auto;
+}
+.container-mod .top {
+    display: flex;
+    gap: 0 1rem;
+    flex: 1 0 auto;
+    flex-wrap: wrap-reverse;
+}
+.mod-image {
+    width: 50%;
+}
+.mod-image img {
+    width: 100%;
+    border: 1ch solid rgb(50, 50, 50);
+}
+.container-mod .title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.container-mod .content {
+    margin-left: 2ch;
+}
+.container-mod .mod-genre {
+    display: block;
+    background: green;
+    width: max-content;
+    margin-top: 1ch;
+    margin-bottom: 0;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+.container-mod .opinion{
+    display: flex;
+    gap: 0 1ch;
+    margin: 1ch 0;
+    width: fit-content;
+}
+.container-mod .opinion > *{
+    flex-basis: 100%;
+    padding: 0.5ch 1ch;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+.container-mod .opinion #cnt-download {
+    background: slateblue;
+    /* cursor: pointer; */
+}
+.container-mod .opinion #cnt-fav {
+    background: orange;
+    cursor: pointer;
+}
+.container-mod .opinion #rt-up {
+    background: lawngreen;
+    cursor: pointer;
+}
+.container-mod .opinion #rt-down {
+    background: red;
+    cursor: pointer;
+}
+.container-mod .opinion #date-created {
+    background: darkgray;
+}
+.container-mod .opinion #date-updated {
+    background: gray;
+}
+
+.container-mod .desc {
+    margin: 1rem 0;
+    text-align: justify;
+}
+.container-mod .desc > * {
+    margin: 1ch 0;
+}
+
+.download .trigger:active .dl-dropdown {
+    display: block;
+    /* position: absolute; */
+}
+
+.dl-dropdown {
+    display: none;
+}
+.dl-dropdown li, button{
+    background: green;
+    list-style: none;
+}
+
+/* input[type="submit"] {
+    background: none;
+    color: white;
+    padding: 5px 1ch;
+    border: 1px solid lime;
+} */
+
+.comment-section {
+    /* background: yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+}
+.comment {
+    display: flex;
+    background: rgb(56, 56, 56);
+    margin: 0 auto;
+    padding: 1ch 0;
+    height: min-content;
+    flex: 0 1 90%;
+    flex-direction: row;
+    border-radius: 5px;
+}
+.comment .user {
+    text-align: center;
+    width: 20%;
+}
+.user-picture {
+    width: 75%;
+    margin: auto;;
+}
+.user-picture img {
+    height: 20ch;
+    width: 20ch;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 100ms;
+}
+.comment-content {
+    width: 80%;
+    margin-left: 1ch;
+}
+
+#user {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+.container-user {
+    margin: 1ch;
+}
+.profile-icon {
+    text-align: center;
+}
+.profile-icon img {
+    border: 0.5ch solid green;
+    height: 20ch;
+    width: 20ch;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 100ms;
+}
+.profile-icon img:hover {
+    object-fit: fill;
+    transform: scale(102.5%);
+    border-radius: 0;
+}
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+}
+.profile-desc {
+    /* background: gray; */
+    width: 100%;
+    height: 50vh;
+}
+.profile-desc a {
+    color: limegreen;
+    text-decoration: underline;
+}
+.container-user th {
+    text-align: left;
+}
+
+/* Dashboard */
+
+.table-data th, .table-data td {
+    /* background: red; */
+    padding: 1ch;
+    border: 1px solid white;
+}
+.table-data img {
+    width: 100%;
+    object-fit: contain;
+}
+.table-data button {
+    width: 5ch;
+    height: 5ch;
+}
+
+@media only screen and (max-width: 6.3in) {
+    .nav-list nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}

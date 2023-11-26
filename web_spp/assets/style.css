@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.expressive:hover, button:hover {
+    transition: 100ms;
+    transform: scale(102.5%);
+}
+.expressive:active, button:active {
+    transform: scale(100%);
+}
+
+#navbar {
+    background: rgb(48, 107, 141);
+    height: 5ch;
+    min-width: 10ch;
+    margin-bottom: 1ch;
+    /* text-indent: 1ch; */
+    display: flex;
+}
+#navbar a {
+    color: lightblue;
+    margin: auto 1ch;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 100ms;
+}
+#navbar a:hover {
+    color:  white;
+}
+#navbar .selected {
+    color:  white;
+    border-bottom: 2.5px solid white;
+}
+#navbar a:active {
+    transform: scale(105%);
+}
+#navbar #logout {
+    background: rgb(141, 71, 71);
+}
+
+.indented {
+    margin-left: 1ch;
+}
+
+.text-image {
+    margin: 1ch;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    min-width: 50ch;
+    gap: 1ch;
+}
+.text-image > * {
+    flex-direction: row;
+}
+.text-image img {
+    border-radius: 1ch;
+}
+
+.login {
+    color: white;
+    background: rgb(50, 50, 50);
+    width: 50ch;
+    padding: 1ch;
+    margin: 5ch auto;
+    border-radius: 1ch;
+}
+.login input {
+    width: 50ch;
+    padding: 1ch;
+    margin: 1ch 0;
+    border: 1px solid black;
+}
+.login button {
+    background: cornflowerblue;
+    padding: 0.5ch 1ch;
+    border: 1px solid black;
+    border-radius: 0.5ch;
+    cursor: pointer;
+}
+
+#data-table {
+    margin: auto;
+    width: 100%;
+}
+
+#data-table th, #data-table td {
+    padding: 1ch;
+    border: 1px solid black;
+}
+
+#data-table tbody > :nth-child(odd){
+    background: lightgray;
+}
+#data-table tbody > :nth-child(even), #data-table th{
+    background: white;
+}
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+.actions a, .actions button {
+    width: 100%;
+}
+button {
+    border: 1px solid black;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+.add {
+    padding: 5px;
+    color: white;
+    background: green;
+}
+.edit {
+    color: white;
+    background: orange;
+}
+.delete {
+    color: white;
+    background: red;
+}
+.detail {
+    color: white;
+    background:darkslategray;
+}
+.print {
+    color: white;
+    background: cornflowerblue;
+}
+
+.configuration {
+    color: white;
+    background: rgb(50, 50, 50);
+    width: fit-content;
+    padding: 1ch;
+    margin: 5ch auto;
+    border-radius: 1ch;
+}
+.configuration input {
+    width: fit-content;
+}
+
+form {
+    background: rgb(50, 50, 50);
+    color: white;
+    margin: 1ch;
+    padding: 1ch;
+    border-radius: 5px;
+}
+
+.form-body {
+    width: 95%;
+    margin: auto;
+}
+
+form input {
+    margin: 0.5ch 0;
+}
+form input[type="text"] {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1ch 0;
+    text-indent: 1ch;
+    width: 100%;
+}
+form input:read-only {
+    background: lightgray;
+}
+form input[type="number"], input[type="password"] {
+    border: 1px dashed black;
+    border-radius: 5px;
+    padding: 1ch 0;
+    text-indent: 1ch;
+    width: 100%;
+}
+
+select, input[type="date"] {
+    border: 1px solid black;
+    border-radius: 1ch;
+    padding: 1ch;
+}
